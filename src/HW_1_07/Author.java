@@ -1,24 +1,24 @@
 package HW_1_07;
 
 public class Author {
-    private String authorName;
-    public Author(String authorName) {this.authorName = authorName;}
-    public boolean equals(Object otherObject)
+    private final String fullAuthorName;
+    public Author (String fullAuthorName) {
+        this.fullAuthorName = fullAuthorName;
+    }
+    @Override
+    public String toString() {
+        return  fullAuthorName;
+    }
+    /*public boolean equals(Object otherObject)
     {
         if(!super.equals(otherObject))
             return false;
         Author other = (Author) otherObject;
-        return authorName == other.authorName;
+        return fullAuthorName == other.fullAuthorName;
     }
 
     public int hashCode()
     {
         return hashCode();
-    }
-
-    public String toString()
-    {
-        return super.toString() + "authorName" + authorName + ".";
-    }
-
+    } */
 }
